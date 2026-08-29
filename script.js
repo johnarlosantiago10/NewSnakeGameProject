@@ -96,31 +96,31 @@ function gameStart() {
   }, gameSpeedDelay);
 }
 
-start.addEventListener("click", () => {
+start.addEventListener("pointerdown", () => {
   if (!gameStarted) {
     gameStart();
   }
 });
 
-rightBtn.addEventListener("click", () => {
+rightBtn.addEventListener("pointerdown", () => {
   if (direction !== "left") {
     direction = "right";
   }
 });
 
-leftBtn.addEventListener("click", () => {
+leftBtn.addEventListener("pointerdown", () => {
   if (direction !== "right") {
     direction = "left";
   }
 });
 
-upBtn.addEventListener("click", () => {
+upBtn.addEventListener("pointerdown", () => {
   if (direction !== "down") {
     direction = "up";
   }
 });
 
-downBtn.addEventListener("click", () => {
+downBtn.addEventListener("pointerdown", () => {
   if (direction !== "up") {
     direction = "down";
   }
@@ -170,6 +170,8 @@ function increaseSpeed() {
   } else if (gameSpeedDelay > 25) {
     gameSpeedDelay -= 1;
   }
+
+  console.log(gameSpeedDelay);
 }
 
 function checkCollision() {
