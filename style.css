@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(39, 36, 36);
+  font-family: "Orbitron", sans-serif;
+}
+
+.snake-container {
+  max-width: clamp(300px, 80vw, 400px);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 3em auto;
+  gap: 1em;
+}
+
+.snake-logo {
+  color: #ff4500;
+  -webkit-text-stroke: 1px #ff4500;
+  text-shadow:
+    0 0 3px #ff4500,
+    0 0 6px #ff4500;
+
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+.border1 {
+  border: 5px solid #ff4500;
+  box-shadow: 0 0 4px #ff4500;
+  border-radius: 22px;
+}
+.border2 {
+  border: 5px solid #ff4500;
+  box-shadow: 0 0 4px #ff4500;
+  border-radius: 15px;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  aspect-ratio: 1 /1;
+  margin: 5px;
+}
+
+.scores {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1em;
+  font-size: 2em;
+  font-weight: bolder;
+  color: whitesmoke;
+}
+
+#highScore {
+  display: none;
+}
+
+.snake {
+  background: #ff4500;
+  box-shadow:
+    0 0 5px #ff4500,
+    0 0 10px #ff4500;
+  margin: 1px;
+}
+
+.food {
+  background: #39ff14;
+  box-shadow:
+    0 0 5px #39ff14,
+    0 0 10px #39ff14;
+  margin: 3px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 1em auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.control-title {
+  color: #ff4500;
+  font-size: 1em;
+}
+.instruction {
+  color: #daceca;
+  font-size: 0.6em;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.middle {
+  display: flex;
+  gap: 8em;
+}
+
+.controls button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 12px;
+  background: #ff4500;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+
+  box-shadow:
+    0 0 5px #ff4500,
+    0 0 10px #ff4500;
+}
+
+.controls button:active {
+  transform: scale(0.9);
+}
+
+#start {
+  width: 100px;
+  height: 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.6em;
+}
