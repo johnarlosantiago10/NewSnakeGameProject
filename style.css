@@ -86,14 +86,6 @@ body {
   margin: 1em auto;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.control-title {
-  color: #ff4500;
-  font-size: 1em;
-}
-.instruction {
-  color: #daceca;
-  font-size: 0.6em;
-}
 
 .controls {
   display: flex;
